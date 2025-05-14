@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio Saya</title>
+  <style>
+    :root {
+      --primary: #00a8e8;
+      --secondary: #0077b6;
+      --background: #f0f8ff;
+      --text: #333;
+      --light: #e0f7fa;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--background);
+      color: var(--text);
+    }
+    header {
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      padding: 1em 0;
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 12px;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 5px;
+    }
+    section {
+      padding: 2em;
+      max-width: 900px;
+      margin: auto;
+    }
+    h1, h2, h3 {
+      color: var(--secondary);
+    }
+    img {
+      max-width: 200px;
+      border-radius: 100px;
+      display: block;
+      margin: 1em auto;
+    }
+    .project, article {
+      background: white;
+      padding: 1.2em;
+      border-left: 5px solid var(--primary);
+      border-radius: 8px;
+      margin-bottom: 1.5em;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    input, textarea {
+      padding: 0.8em;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      background-color: var(--light);
+    }
+    button {
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      padding: 0.8em;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background-color: var(--secondary);
+    }
+    footer {
+      text-align: center;
+      padding: 1em;
+      background-color: var(--primary);
+      color: white;
+      margin-top: 2em;
+    }
+    ul li a {
+      color: var(--secondary);
+      text-decoration: underline;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const links = document.querySelectorAll("nav a");
+      links.forEach(link => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          const target = document.querySelector(link.getAttribute("href"));
+          if (target) {
+            window.scrollTo({ top: target.offsetTop - 60, behavior: 'smooth' });
+          }
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Beranda</a></li>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#portfolio">Portofolio</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h1>Halo, Saya DAFFA</h1>
+    <p>hobi saya bermain game</p>
+    <p>hidup itu susah tapi jangan dibuat tambah susah</p>
+    <img src="orang.jpeg" alt="Foto DAFFA" />
+  </section>
+
+  <section id="about">
+    <h2>Tentang Saya</h2>
+    <p><strong>Nama:</strong> DAFFA<br />
+    <strong>Tempat, Tanggal Lahir:</strong> Jepara, 20 Oktober 2003<br />
+    <strong>Alamat:</strong> Pengkol, Jawa Tengah</p>
+
+    <h3>Riwayat Pendidikan</h3>
+    <ul>
+      <li>SD Al islam Jepara</li>
+      <li>SMP Negeri 2 Jepara</li>
+      <li>SMA Negeri 1 Jepara </li>
+      <li>Universitas Nahdlatul Ulama Prodi Sistem Informasi</li>
+    </ul>
+
+    <h3>Skill Set</h3>
+    <ul>
+      <li> HTML, CSS, JavaScript  </li>
+      <li> Design UI UX </li>
+    </ul>
+
+    <h3>Tools</h3>
+    <ul>
+      <li>VSCode</li>
+      <li>Figma</li>
+      <li>Git & GitHub</li>
+    </ul>
+  </section>
+
+  <section id="portfolio">
+    <h2>Portofolio</h2>
+  
+    <div class="project">
+      <h3>Desain UI M Banking BCA</h3>
+      <img src=gambar.png alt="Desain UI M Banking BCA" />
+      <p>Proyek desain tampilan M Banking BCA.</p>
+      <p><strong>Teknologi:</strong> Figma</p>
+      <p>
+        <a href=https://www.figma.com/design/Q7Q7hiXy31yaoPCWCBtreY/UAS-UI-UX?node-id target="_blank">Demo</a>
+      </p>
+    </div>
+  </section>
+  
+
+  <section id="blog">
+    <h2>Blog</h2>
+  
+    <article>
+      <h3>Belajar JavaScript untuk Pemula</h3>
+      <img src="javascript.png" alt="Ilustrasi belajar JavaScript">
+      <p>
+        JavaScript adalah bahasa pemrograman yang sangat populer dan digunakan secara luas dalam pengembangan web.
+        Bagi pemula, memulai belajar JavaScript bisa terasa membingungkan, namun dengan pendekatan yang tepat, kamu akan cepat memahaminya.
+      </p>
+      <p>
+        Langkah awal belajar JavaScript adalah memahami dasar-dasar seperti variabel, tipe data, operator, percabangan, dan perulangan. 
+        Setelah itu, lanjutkan ke fungsi, DOM (Document Object Model), dan event handling. Banyak sumber gratis tersedia seperti Mozilla Developer Network (MDN), freeCodeCamp, dan W3Schools.
+      </p>
+      <p>
+        Praktik adalah kunci utama. Cobalah membuat proyek kecil seperti kalkulator, daftar tugas (to-do list), atau game sederhana untuk mengasah kemampuanmu.
+        Jangan lupa gunakan browser console untuk eksperimen kecil dan debugging. Terus belajar dan jangan takut gagal!
+      </p>
+    </article>
+  
+    <article>
+      <h3>Kenapa Harus Pakai Git?</h3>
+      <img src="git.png" alt="Git version control illustration">
+      <p>
+        Git adalah sistem kontrol versi yang sangat powerful dan banyak digunakan di industri pengembangan perangkat lunak. 
+        Menggunakan Git membantu kamu melacak perubahan kode, bekerja sama dengan tim, dan mencegah hilangnya data.
+      </p>
+      <p>
+        Salah satu alasan utama menggunakan Git adalah kemampuannya dalam mencatat riwayat perubahan secara rinci. 
+        Setiap kali kamu melakukan commit, Git menyimpan snapshot dari proyekmu. Ini memudahkan kamu untuk kembali ke versi sebelumnya jika terjadi kesalahan.
+      </p>
+      <p>
+        Dengan platform seperti GitHub, GitLab, atau Bitbucket, kamu bisa berbagi proyekmu, berkolaborasi dengan developer lain, dan bahkan membangun portofolio terbuka yang bisa dilihat rekruter.
+        Jadi, jika kamu ingin serius di bidang teknologi, Git adalah keterampilan dasar yang wajib dikuasai.
+      </p>
+    </article>
+  </section>
+  
+
+  <section id="contact">
+    <h2>Kontak</h2>
+    <form action="https://formspree.io/f/yourformid" method="POST">
+      <input type="text" name="name" placeholder="Nama" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <textarea name="message" placeholder="Pesan" required></textarea>
+      <button type="submit">Kirim</button>
+    </form>
+    <p>Atau hubungi saya di:</p>
+    <ul>
+      <li><a href="https://linkedin.com/in/Daffa" target="_blank">LinkedIn</a></li>
+      <li><a href="https://github.com/Daffa" target="_blank">GitHub</a></li>
+      <li><a href="https://instagram.com/Daffa" target="_blank">Instagram</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 website portofolio </p>
+  </footer>
+</body>
+</html>
